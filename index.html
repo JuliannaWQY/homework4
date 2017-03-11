@@ -19,62 +19,6 @@
 <body>
 
  <style>
-
- .accordion {
-	margin: 1rem 0;
-	padding: 0;
-	list-style: none;
-	border-top: 1px solid #e5e5e5;
-}
-
-.accordion-item {
-	border-bottom: 1px solid #e5e5e5;
-}
-
-/* Thumb */
-.accordion-thumb {
-	margin: 0;
-	padding: .8rem 0;
-	cursor: pointer;
-	font-weight: normal;
-	
-	/* Chevron*/
-	&::before {
-		content: '';
-		display: inline-block;
-		height: 7px;
-		width: 7px;
-		margin-right: 1rem;
-		margin-left: .5rem;
-		vertical-align: middle;
-		border-right: 1px solid;
-		border-bottom: 1px solid;
-		transform: rotate(-45deg);
-		transition: transform .2s ease-out;
-	}
-}
-
-
-/* Panel */
-.accordion-panel {
-	margin: 0;
-	padding-bottom: .8rem;
-	display: none;
-}
-
-/* Active */
-.accordion-item.is-active {
-	.accordion-thumb::before {
-		transform: rotate(45deg);
-	}
-}
-
-/* General page styling */
-html {
-	font-size: 14px;
-	color: #444;
-}
-
    body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
@@ -126,44 +70,38 @@ h3 {
     <br>
     <br>
 
-<ul class="accordion">
-	<li class="accordion-item is-active">
-		<h3 class="accordion-thumb"> What the hell is Engel's Coefficient? </h3>
+<h3> What the hell is Engel's Coefficient? </h3>
       <div class="row">
-        <div class="col-md-12">
-		      <p class="accordion-panel">
-	        	Engel's Coefficient equals to Total expenditure on food in a household/for an individual / Total expenditure in the same period </li>
-             Compared family to familt, certain time period to another, country to contry, it reveals the general consuming level and wealth level of the subject. </li>  
-	     	</p>
+	<div class="col-md-2">
+	</div>
+        <div class="col-md-8">
+	        <li>Engel's Coefficient equals to Total expenditure on food in a household/for an individual / Total expenditure in the same period </li>
+		<li>Compared family to familt, certain time period to another, country to contry, it reveals the general consuming level and wealth level of the subject. </li>  
        </div>
-     </div>
-   </li>
+       <div class="col-md-2">
+       </div>
+      </div>
 
-<li class="accordion-item">
-		<h3 class="accordion-thumb">Where does it come from?</h3>
-		<p class="accordion-panel">     
+<br>
+	
+<h3>Where does it come from?</h3>  
       <div class="row" id="introduction">
         <div class="col-md-2">
         </div>
         <div class="col-md-8"> 
-          It comes from "Engel's law", which is an observation in economics stating that as income rises, the proportion of income spent on food falls, even if absolute expenditure on food rises. In other words, the income elasticity of demand of food is between 0 and 1. The law was named after the statistician Ernst Engel (1821–1896). 
-          Engel's law does not imply that food spending remains unchanged as income increases: It suggests that consumers increase their expenditures for food products in percentage terms less than their increases in income. One application of this statistic is treating it as a reflection of the living standard of a country. As this proportion or "Engel coefficient" increases, the country is by nature poorer, conversely a low Engel coefficient indicates a higher standard of living. The interaction between Engel's law, technological progress, and the process of structural change is crucial for explaining long term economic growth as suggested by Leon, and Pasinetti.
+          <p>It comes from "Engel's law", which is an observation in economics stating that as income rises, the proportion of income spent on food falls, even if absolute expenditure on food rises. In other words, the income elasticity of demand of food is between 0 and 1. The law was named after the statistician Ernst Engel (1821–1896). </p>
+          <p>Engel's law does not imply that food spending remains unchanged as income increases: It suggests that consumers increase their expenditures for food products in percentage terms less than their increases in income. One application of this statistic is treating it as a reflection of the living standard of a country. As this proportion or "Engel coefficient" increases, the country is by nature poorer, conversely a low Engel coefficient indicates a higher standard of living. The interaction between Engel's law, technological progress, and the process of structural change is crucial for explaining long term economic growth as suggested by Leon, and Pasinetti.</p>
        </div>
        <div class="col-md-2">
        </div>
      </div>
-		</p>
-</li>
-
-
-<li class="accordion-item">
-		 <h3 class="accordion-thumb"> Enough explanition, let's calculate your/your family's Engel's Coefficient! 
-     </h3>
-		<p class="accordion-panel">
-       <div class="row">
-         <div class="col-md-2">
-         </div>
-         <div class="col-md-8"> 
+		
+<br>
+<h3> Enough explanition, let's calculate your/your family's Engel's Coefficient! </h3>
+   <div class="row">
+       <div class="col-md-2">
+       </div>
+       <div class="col-md-8"> 
            <div class="input-group">
              <label for="input">How much you spend on a normal day's meal? (HKD)</label>
              <input type="text" class="form-control" id="dailyMeal" placeholder="Daily expenditure on meals">
@@ -243,26 +181,10 @@ h3 {
             $('#result').val(answer);
                         });
                     }); // Routine format; put all your jQuery initialisation inside
-	 
-	 $(function() {
-	// (Optional) Active an item if it has the class "is-active"	
-	$(".accordion > .accordion-item.is-active").children(".accordion-panel").slideDown();
 	
-	$(".accordion > .accordion-item").click(function() {
-		// Cancel the siblings
-		$(this).siblings(".accordion-item").removeClass("is-active").children(".accordion-panel").slideUp();
-		// Toggle the item
-		$(this).toggleClass("is-active").children(".accordion-panel").slideToggle("ease-out");
-	});
-});
 	 
  </script>
 
-</p>
-</li>
-</ul>
-
 </body>
-
 
 </html>

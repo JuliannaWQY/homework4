@@ -1,1 +1,258 @@
-<>
+<!DOCTYPE html>
+<html>
+<head>
+<script src='main.js'></script>
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+</head>
+
+
+
+<body>
+
+ <style>
+
+ .accordion {
+	margin: 1rem 0;
+	padding: 0;
+	list-style: none;
+	border-top: 1px solid #e5e5e5;
+}
+
+.accordion-item {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+/* Thumb */
+.accordion-thumb {
+	margin: 0;
+	padding: .8rem 0;
+	cursor: pointer;
+	font-weight: normal;
+	
+	/* Chevron
+	&::before {
+		content: '';
+		display: inline-block;
+		height: 7px;
+		width: 7px;
+		margin-right: 1rem;
+		margin-left: .5rem;
+		vertical-align: middle;
+		border-right: 1px solid;
+		border-bottom: 1px solid;
+		transform: rotate(-45deg);
+		transition: transform .2s ease-out;
+	}
+}
+*/
+
+/* Panel */
+.accordion-panel {
+	margin: 0;
+	padding-bottom: .8rem;
+	display: none;
+}
+
+/* Active */
+.accordion-item.is-active {
+	.accordion-thumb::before {
+		transform: rotate(45deg);
+	}
+}
+
+/* General page styling */
+html {
+	font-size: 14px;
+	color: #444;
+}
+
+   body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    max-width: 2000px;
+    line-height: 1.5;
+   }
+
+   div{
+    font-size: larger;
+    border:none;
+    border-radius:50px;
+    position:relative;
+   }
+
+   a:hover {
+	color: #cc0000;
+	text-decoration: none;
+}
+
+   a:visited {
+  color:#ee9a00;
+  }
+  
+h3 {
+    text-align:center;
+    color:#ee9a00;
+}
+
+  img {
+      width:25px;
+      height:25px;
+  }
+
+  
+</style>
+
+<header>
+    <br>
+    <br>
+  <div class="row">
+    <div class="col-md-12" style="background-color:lightgrey">
+      <h1 style="text-align:center"><em><i>Calculation of Engel's Coefficient</i></em></h1>
+      <h2 style="text-align:center"> A simple Camculator of the Important Index that Marks Social/Family Wealth Level </h2>
+      <br>
+      <p style="text-align:center">by <a class="btn btn-primary btn-lg" href="https://juliannawqy.github.io/" target="_blank" role="button"> Julianna Wu</a></p>
+    </div>
+  </div>
+</header>
+    <br>
+    <br>
+
+<ul class="accordion">
+	<li class="accordion-item is-active">
+		<h3 class="accordion-thumb"> What the hell is Engel's Coefficient? </h3>
+      <div class="row">
+        <div class="col-md-12">
+		      <p class="accordion-panel">
+	        	<ul>
+             <li> Engel's Coefficient equals to Total expenditure on food in a household/for an individual / Total expenditure in the same period </li>
+             <li> Compared family to familt, certain time period to another, country to contry, it reveals the general consuming level and wealth level of the subject. </li>  
+            </ul>
+	     	</p>
+       </div>
+     </div>
+   </li>
+
+<li class="accordion-item">
+		<h3 class="accordion-thumb">Where does it come from?</h3>
+		<p class="accordion-panel">     
+      <div class="row" id="introduction">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8"> 
+          <p> It comes from "Engel's law", which is an observation in economics stating that as income rises, the proportion of income spent on food falls, even if absolute expenditure on food rises. In other words, the income elasticity of demand of food is between 0 and 1. The law was named after the statistician Ernst Engel (1821–1896). </p>
+          <p> Engel's law does not imply that food spending remains unchanged as income increases: It suggests that consumers increase their expenditures for food products in percentage terms less than their increases in income. One application of this statistic is treating it as a reflection of the living standard of a country. As this proportion or "Engel coefficient" increases, the country is by nature poorer, conversely a low Engel coefficient indicates a higher standard of living. The interaction between Engel's law, technological progress, and the process of structural change is crucial for explaining long term economic growth as suggested by Leon, and Pasinetti.</p>
+       </div>
+       <div class="col-md-2">
+       </div>
+     </div>
+		</p>
+</li>
+
+
+<li class="accordion-item">
+		 <div class="accordion-thumb"> <img src="https://www.emojibase.com/resources/img/emojis/apple/x1f447.png.pagespeed.ic.gocRcY5kpd.png"> Enough explanition, let's calculate your/your family's Engel's Coefficient! <img src="https://www.emojibase.com/resources/img/emojis/apple/x1f447.png.pagespeed.ic.gocRcY5kpd.png">
+     </div>
+		<p class="accordion-panel">
+       <div class="row">
+         <div class="col-md-2">
+         </div>
+         <div class="col-md-8"> 
+           <div class="input-group">
+             <label for="input">How much you spend on a normal day's meal? (HKD)</label>
+             <input type="text" class="form-control" id="dailyMeal" placeholder="Daily expenditure on meals">
+           </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+
+<div class="row">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-8"> 
+     <div class="input-group">
+        <label for="input">In a month, how much else do you spend on food? (Snack? Weekly treat?...) </label>
+        <input type="text" class="form-control" id="otherMeal" placeholder="Other expenditure on food">
+     </div>
+   </div>
+   <div class="col-md-2">
+   </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-8"> 
+    <div class="input-group">
+        <label for="input">What's your total expenditure per month? 
+            <p> Could be calculated by revenue (money from parents) - Saving.</p> </label>
+        <input type="text" class="form-control" id="total" placeholder="Total expenditure">
+    </div>
+  </div>
+  <div class="col-md-2">
+  </div>
+</div>
+<br>
+<br>
+
+
+ <div class="row">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-10">
+    <button class="btn btn-primary" id="calculate">Calculate</button>    
+ </div>    
+ </div>
+
+ <br>
+ <br>
+
+
+<div class="row">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-8"> 
+    <div class="output">
+        <label for="input">Your Engel coefficient per month is...</label>
+        <input type="text" class="form-control" id="result">
+    </div>
+  </div>
+  <div class="col-md-2">
+  </div>
+</div>
+
+ <script>
+    $(function() { // Routine format; put all your jQuery initialisation inside
+        $('#calculate').click(function() { // Set the mouse click event hander for element "#calculate"
+            // Normal Javascript here
+            // Do whatever you want
+          var food1 = $('#dailyMeal').val();
+          var food2 = $('#otherMeal').val();
+          var expenditure = $('#total').val();
+          var meal = food1 * 30;
+          var totalMeal = meal + food2;
+          var answer = totalMeal / expenditure;
+            $('#result').val(answer);
+                        });
+                    }); // Routine format; put all your jQuery initialisation inside
+ </script>
+
+</p>
+</li>
+</ul>
+
+</body>
+
+
+</html>
